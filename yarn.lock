@@ -1797,6 +1797,18 @@ three-stdlib@^2.29.9:
     fflate "^0.6.9"
     potpack "^1.0.1"
 
+three-stdlib@^2.30.4:
+  version "2.30.4"
+  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.30.4.tgz#5c6b7b2cb4c046e81a3017c4421eed9ed8c54767"
+  integrity sha512-E7sN8UkaorSq2uRZU14AE7wXkdCBa2oFwPkPt92zaecuzrgd98BXkTt+2tFQVF1tPJRvfs7aMZV5dSOq4/vNVg==
+  dependencies:
+    "@types/draco3d" "^1.4.0"
+    "@types/offscreencanvas" "^2019.6.4"
+    "@types/webxr" "^0.5.2"
+    draco3d "^1.4.1"
+    fflate "^0.6.9"
+    potpack "^1.0.1"
+
 three@0.153.0:
   version "0.153.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.153.0.tgz#d8f2aab7b49ae4ac947fd0e24cebec11378758f0"

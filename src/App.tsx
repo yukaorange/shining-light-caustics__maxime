@@ -1,7 +1,16 @@
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useLoader } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
 
-import { Experience } from '@/components/Experience'
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+  useEnvironment,
+  useTexture,
+} from '@react-three/drei'
+
+import { Caustics } from '@/components/Caustics'
+import { Ground } from '@/components/Ground'
 import { Sns } from '@/components/Sns'
 import { MenuButton } from '@/components/MenuButton'
 import { Loader } from '@react-three/drei'
@@ -14,15 +23,14 @@ const App = () => {
       <Leva collapsed />
       <MenuButton />
       <Sns />
-      <Canvas
-        camera={{
-          position: [0, 0, 5],
-          fov: 45,
-        }}
-      >
+      <Canvas dpr={[1, 2]}>
+        <color attach="background" args={['#eeeeee']} />
         <Perf position="top-left" />
+        <OrbitControls />
+        <PerspectiveCamera makeDefault position={[0, 25, 25]} fov={65} />
         <Suspense fallback={null}>
-          <Experience />
+          <Caustics />
+          <Ground />
         </Suspense>
       </Canvas>
       <Loader />
